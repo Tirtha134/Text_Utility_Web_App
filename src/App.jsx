@@ -6,7 +6,7 @@ import Alert from './components/Alert';
 import About from './components/About';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// ScrollToTop ensures every route starts from top
+// ScrollToTop ensures top scroll on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -47,13 +47,11 @@ function App() {
         aboutText="About"
       />
       <Alert alert={alert} />
+
       <div className="container my-3">
         <Routes>
-          <Route
-            path="/"
-            element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}
-          />
-          <Route path="/about" element={<About />} />
+          <Route path="/Home/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} />
+          <Route path="/Home/about" element={<About />} />
         </Routes>
       </div>
     </Router>
