@@ -53,14 +53,55 @@ export default function Textform(props) {
             id="myBox"
             rows="8"
           ></textarea>
-        </div>
 
-        <button disabled={text.length===0} className='btn btn-primary mx-3 my-2' onClick={handleUpClick}>Convert to Uppercase</button>
-        <button disabled={text.length===0} className='btn btn-warning mx-3 my-2' onClick={handleLoClick}>Convert to Lowercase</button>
-        <button disabled={text.length===0}  className='btn btn-success mx-3 my-2' onClick={handleClearClick}>Clear Text</button>
-        <button disabled={text.length===0} className='btn btn-danger mx-3 my-2' onClick={handleCopyClick}>Copy Text</button>
-        <button disabled={text.length===0} className='btn btn-secondary mx-3 my-2' onClick={handleExtraSpace}>Remove Extra Spaces</button>
-      </div>
+
+<div className="d-flex flex-wrap justify-content-start my-3 gap-2">
+  <button
+    disabled={text.length === 0}
+    className="btn btn-primary flex-grow-1 flex-md-grow-0"
+    onClick={handleUpClick}
+  >
+    Convert to Uppercase
+  </button>
+
+  <button
+    disabled={text.length === 0}
+    className="btn btn-warning flex-grow-1 flex-md-grow-0"
+    onClick={handleLoClick}
+  >
+    Convert to Lowercase
+  </button>
+
+  <button
+    disabled={text.length === 0}
+    className="btn btn-success flex-grow-1 flex-md-grow-0"
+    onClick={handleClearClick}
+  >
+    Clear Text
+  </button>
+
+  <button
+    disabled={text.length === 0}
+    className="btn btn-danger flex-grow-1 flex-md-grow-0"
+    onClick={handleCopyClick}
+  >
+    Copy Text
+  </button>
+
+  <button
+    disabled={text.length === 0}
+    className="btn btn-secondary flex-grow-1 flex-md-grow-0"
+    onClick={handleExtraSpace}
+  >
+    Remove Extra Spaces
+  </button>
+</div>
+
+
+
+
+
+          
 
       <hr />
 
